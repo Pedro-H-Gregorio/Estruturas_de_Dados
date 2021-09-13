@@ -11,8 +11,9 @@ class Pilha {
   }
 
   pop() {
-    let valor = this.isEmpty()? null : this.lista[this.lista.length - 1]
+    let value = this.isEmpty()? null : this.lista[this.lista.length - 1]
     this.lista.splice(this.lista.length - 1,1)
+    return value
   }
 
   size() {
@@ -29,8 +30,3 @@ class Pilha {
 }
 
 module.exports = Pilha;
-
-let lista = new Pilha ()
-console.log(lista.lista.length)
-lista.pop()
-console.log(lista.pop())
