@@ -3,38 +3,34 @@
 class Pilha {
 
   constructor() {
-    this.lista = new Array();
+    this.lista = new Array()
   }
 
   push(e) {
-    // Adiciona um elemento no topo da pilha
-    // TODO
+    return this.lista[this.lista.length]=e
   }
 
   pop() {
-    // Retorna o elemento do topo da pilha, removendo ele.
-    // TODO
-    return null;
+    let valor = this.isEmpty()? null : this.lista[this.lista.length - 1]
+    this.lista.splice(this.lista.length - 1,1)
   }
 
   size() {
-    // Retorna a quantidade de elementos na pilha
-    // TODO
-    return 0;
+    return this.lista.length;
   }
 
   isEmpty() {
-    // Retorna um boleano indicando se a pilha está vazia ou não
-    // TODO
-    return true;
+    return this.lista.length == 0 ? true : false ;
   }
 
   top() {
-    // Retorna o elemento do topo da pilha, mas não remove.
-    // TODO
-    return null;
+    return this.isEmpty() ? null : this.lista[this.lista.length - 1]
   }
-
 }
 
 module.exports = Pilha;
+
+let lista = new Pilha ()
+console.log(lista.lista.length)
+lista.pop()
+console.log(lista.pop())
